@@ -6,5 +6,5 @@ This is a simple project using Flask application.
 Home Page
 ![home page](./static/assets/library-project-home.png)
 
-Add PAge
+Add Page
 ![Add page](./static/assets/library-project-addpage.png)
