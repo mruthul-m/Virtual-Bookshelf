@@ -9,8 +9,9 @@
     {% if all_books%}
     <ul>
      
-      {% for details in all_books[::-1] %}
-      <li><p style="font-weight: 700; font-size: larger;">{{details['title']}}- {{details['author']}}-  {{details['rating']}}/10</p></li>
+      {% for details in all_books %}
+      <li><p style="font-weight: 700; font-size: larger;">{{details.title}}- {{details.author}}-  {{details.rating}}/10</p></li>
+    
       {% endfor%}
     </ul>
     {% else %}
