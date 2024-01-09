@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    background: #fafafa;
+    width: 40%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 30%;
+    padding: 20px;
+    margin: 40px 0;
+    box-shadow: 2px 0px 0px 4px rgba(255, 255, 255, .9);
+    border-radius: 5px;
+
+}
+
+
+
+.form-box {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: auto 0;
+    padding: 0 20px;
+
+}
+
+.form-box .form-btn {
+
+
+    --b: 3px;
+    /* border thickness */
+    --s: .45em;
+    /* size of the corner */
+    --color: #373B44;
+
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+
+    border: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.form-btn:hover,
+.form-btn:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+.form-btn:active {
+    background: var(--color);
+    color: #fff;
+}
+
+
+.form-box .form-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 1.4rem;
+}
+
+.form-box .form-input::placeholder {
+    color: gray;
+}
+
+.left-container {
+    background: url("../assets/addpagePhoto.jpg");
+    width: 400px;
+    height: 400px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 1;
+    border-radius: 10px;
+}
+
+.wrapper {
+    display: flex;
+
+}

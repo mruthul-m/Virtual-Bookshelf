@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Library</title>
-  </head>
-  <body>
-    <h1>My Library</h1>
-    {% if all_books%}
-    <ul>
-     
-      {% for details in all_books %}
-      <li><p style="font-weight: 700; font-size: larger;">{{details.title}}- {{details.author}}-  {{details.rating}}/10</p></li>
-    
-      {% endfor%}
-    </ul>
-    {% else %}
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Library</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+
+      <div class="main-header">
+        <p class="header">My Library</p>
+
+        <p class="new-link">
+
+          <a href="{{url_for("add")}}" ><button class="link-btn">Add <i class='bx bxs-hand-up'></i></button></a>
+        </p>
+        </div>
+      {% if all_books%}
+      <ul class="list-box">
+
+        {% for details in all_books %}
+        <li>
+          <p style="font-weight: 700; font-size: larger;"><i class='bx bx-book-alt' style='color:#000' ></i>  {{details.title}} <i class='bx bx-pen' style='color:#000' ></i>  {{details.author}}  <i class='bx bx-star' style="color: #000;"></i> {{details.rating}}/10
+          </p>
+        </li>
+
+        {% endfor%}
+      </ul>
+      {% else %}
       <p>List is empty</p>
-    {% endif %}
-    <a href="{{url_for("add")}}">Add New Book</a>
-  </body>
+      {% endif %}
+
+    </div>
+  </div>
+</body>
+
 </html>
